@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(-45deg, black, rgb(46, 3, 3), rgb(94, 4, 4));
+    animation: bg 12s ease infinite;
+    background-size: 100;
+    padding: 20px;
+  }
+  @keyframes bg{
+    0%{
+        background-position: 8, 50%;
+    }
+    50%{
+        background-position: 100%, 100%;
+    }
+    100%{
+        background-position: 8%, 50%;
+    }
+  }
+  
+  .agenda {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .card.expanded {
+    width: 100%;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .tarefas {
+    margin-top: 10px;
+  }
+  
+  .lista-tarefas {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .lista-tarefas li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .lista-tarefas input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .input-tarefa {
+    width: calc(100% - 100px);
+    padding: 5px;
+    margin-top: 10px;
+  }
+  
+  .add-tarefa {
+    padding: 5px 10px;
+    margin-top: 10px;
+  }
+  
