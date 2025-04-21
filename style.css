@@ -2,7 +2,6 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
   }
-  
   body {
     background: linear-gradient(-45deg, black, rgb(46, 3, 3), rgb(94, 4, 4));
     animation: bg 12s ease infinite;
@@ -21,25 +20,53 @@
     }
   }
   
-  .agenda {
+  .agenda-box{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
   }
   
   .card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
     background: white;
     border-radius: 10px;
     padding: 15px;
-    width: 200px;
-    cursor: pointer;
+    margin: 0 5rem 0 5rem;
+    width: 80%;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
   }
   
   .card.expanded {
-    width: 100%;
+    
   }
+  .hidden {
+    display: none;
+  }
+  
+  .toggle-icons {
+    display: flex;
+    flex: 1 1 50%;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .toggle-icons img {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .toggle-icons img:hover {
+    transform: scale(1.1);
+  }
+  
   
   .hidden {
     display: none;
@@ -47,6 +74,7 @@
   
   .tarefas {
     margin-top: 10px;
+    flex: 1 1 50%
   }
   
   .lista-tarefas {
@@ -73,5 +101,8 @@
   .add-tarefa {
     padding: 5px 10px;
     margin-top: 10px;
+  }
+  .titlecard{
+    flex: 1 1 50%
   }
   
